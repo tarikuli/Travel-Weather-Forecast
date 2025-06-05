@@ -1,66 +1,55 @@
-# Travel-Weather-Forecast
-Here's a complete Streamlit application that gets weather forecasts for origin and destination addresses using OpenRouter.ai:
+# Travel Weather Forecast
 
----
+A Python project for retrieving and displaying weather forecasts for travel planning. This project is designed to help users check weather conditions for various destinations, making it easier to plan trips and pack accordingly.
 
-## 🚀 App Goal
+## Features
+- Fetches weather forecasts for specified locations
+- Supports multiple destinations
+- Command-line interface for quick access
+- Easy to configure and extend
 
-The goal of ModelSwitchboard is to provide a simple way for users and teams to:
-- Try out different LLMs (OpenAI, Anthropic, Google, Mistral, Meta, etc.) via OpenRouter.
-- Compare model responses and behaviors side-by-side.
-- Adjust model parameters (temperature, max tokens) for experimentation.
+## Requirements
+- Python 3.7 or higher
+- See `requirements.txt` for dependencies
 
----
+## Setup
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd Travel-Weather-Forecast
+   ```
+2. **Create a virtual environment (recommended):**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Set up environment variables:**
+   - Create a `.env` directory or file as needed for your API keys and configuration.
+   - Example variables:
+     ```env
+     WEATHER_API_KEY=your_api_key_here
+     ```
 
-## 🛠️ How to Use
+## Usage
+Run the main script to get weather forecasts:
+```bash
+python main.py
+```
 
-1. **Enter your OpenRouter API Key** in the sidebar to authenticate.
-2. **Select a model** from the dropdown menu to choose which AI model you want to chat with.
-3. **Adjust the temperature and max tokens** sliders to control the creativity and length of the responses.
-4. **Type your question or prompt** in the chat input at the bottom and press Enter.
-5. **View the conversation history** in the main area, showing both your messages and the model’s responses.
+You may be prompted to enter destination(s) or configure them in the script.
 
-This setup makes it easy for anyone on the team to test different LLMs and settings for various use cases.
+## Project Structure
+- `main.py` — Main application script
+- `requirements.txt` — Python dependencies
+- `.env/` or `.env` — Environment variables (not tracked by git)
 
----
+## Notes
+- The `.env/` directory and `.env` files are ignored by git for security.
+- Make sure to obtain and set your weather API key in the environment variables.
 
-## 💻 Running Locally
-
-1. **Create a Python virtual environment:**
-    ```bash
-    python -m venv .env
-    ```
-
-2. **Activate the virtual environment:**
-    ```bash
-    source .env/bin/activate
-    ```
-
-3. **Install the requirements:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Run the app:**
-    ```bash
-    streamlit run main.py
-    ```
-
----
-
-## 📋 Requirements
-
-- Python 3.8+
-- [Streamlit](https://streamlit.io/)
-- [requests](https://pypi.org/project/requests/)
-
----
-
-## 📝 Notes
-
-- You need an [OpenRouter API key](https://openrouter.ai/) to use the app.
-- The app fetches available models dynamically from OpenRouter, but falls back to a default list if the API is unavailable.
-
----
-
-Enjoy experimenting with different LLMs!
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
